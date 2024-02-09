@@ -24,22 +24,24 @@ public class DeliSandwich {
     this.fillings = fillings;
   }
 
+  public String listFilling(){
+    StringBuilder sb = new StringBuilder();
+    for (String key : fillings.keySet()){
+      sb.append(String.format("%s%n",key));
+    }
+    return sb.toString();
+  }
+
   /**
-   * Using a StringBuilder because we will use a loop later...
-   *
    * @return a String about sandwiches
    */
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("This ").append(this.getClass().getName());
-    sb.append(" is ");
-    sb.append(slicesOfBread > 1 ? "Bread":"");
-    for (String key : fillings.keySet()){
-      sb.append(key).append("\n");
-    }
-    sb.append(" bread.");
-    return sb.toString();
+    return "This " + this.getClass().getName()
+        + " is "
+        + (slicesOfBread > 1 ? "Bread" : "")
+        + listFilling()
+        + " bread.";
   }
 
   public Integer getSlicesOfBread() {
