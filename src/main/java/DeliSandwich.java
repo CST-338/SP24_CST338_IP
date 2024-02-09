@@ -1,9 +1,9 @@
 /**
  * Used in a lesson on inheritance.
+ * @author drew a clinkenbeard
  */
 public class DeliSandwich {
-
-  //Integer rather than int becuase of containers.
+  //Integer rather than int because of containers.
   private Integer slicesOfBread;
   private String filling;
 
