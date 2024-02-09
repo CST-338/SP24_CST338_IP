@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class Burger extends DeliSandwich{
 
   public Burger(){
@@ -8,4 +6,10 @@ public class Burger extends DeliSandwich{
   public Burger(String filling){
     super(2,filling);
   }
+
+  @Override
+  public String toString(){
+    return "Bun burger patty bun";
+  }
+
 }

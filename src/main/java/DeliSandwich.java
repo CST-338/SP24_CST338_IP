@@ -6,7 +6,7 @@ import java.util.Objects;
  *
  * @author drew a clinkenbeard
  */
-public class DeliSandwich {
+public class DeliSandwich implements Sandwich {
 
   //Integer rather than int because of containers.
   private Integer slicesOfBread;
@@ -24,6 +24,7 @@ public class DeliSandwich {
     this.fillings = fillings;
   }
 
+  @Override
   public String listFilling(){
     StringBuilder sb = new StringBuilder();
     for (String key : fillings.keySet()){
@@ -44,22 +45,6 @@ public class DeliSandwich {
         + " bread.";
   }
 
-  public Integer getSlicesOfBread() {
-    return slicesOfBread;
-  }
-
-  public void setSlicesOfBread(Integer slicesOfBread) {
-    this.slicesOfBread = slicesOfBread;
-  }
-
-  public HashMap<String, Integer> getFilling() {
-    return fillings;
-  }
-
-  public void setFilling(HashMap<String, Integer> filling) {
-    this.fillings = filling;
-  }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -74,13 +59,13 @@ public class DeliSandwich {
     if (!Objects.equals(slicesOfBread, sandwich.slicesOfBread)) {
       return false;
     }
-    return fillings.equals(sandwich.fillings);
+    return Objects.equals(fillings, sandwich.fillings);
   }
 
   @Override
   public int hashCode() {
     int result = slicesOfBread != null ? slicesOfBread.hashCode() : 0;
-    result = 31 * result + fillings.hashCode();
+    result = 31 * result + (fillings != null ? fillings.hashCode() : 0);
     return result;
   }
 }
