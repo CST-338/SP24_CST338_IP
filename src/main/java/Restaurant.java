@@ -2,18 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant {
-
   public static void main(String[] args) {
-    DeliSandwich sandwich = new DeliSandwich(2, "Ham and Cheese");
 
     List<DeliSandwich> menu = new ArrayList<>();
-    menu.add(sandwich);
+    DeliSandwich sandwich = new DeliSandwich(2, "Ham and Cheese");
+    Burger burger = new Burger();
 
-    menu.add(new Burger("Beef patty"));
+    menu.add(sandwich);
+    menu.add(burger);
 
     for(DeliSandwich s : menu){
       System.out.println(s);
     }
   }
-
 }

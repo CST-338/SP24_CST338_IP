@@ -19,7 +19,7 @@ public class DeliSandwich {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("This sandwhich has ");
+    sb.append("This sandwich has ");
     sb.append(filling);
     sb.append(" between ");
     sb.append(slicesOfBread);
