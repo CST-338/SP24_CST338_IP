@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * Used in a lesson on inheritance.
+ * Used in a lesson on inheritance. Represents a sandwich.
  *
  * @author drew a clinkenbeard
  */

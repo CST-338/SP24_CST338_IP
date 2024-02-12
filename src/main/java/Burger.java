@@ -1,3 +1,7 @@
+/**
+ * @author drew a clinkenbeard
+ * This represents a burger.  It is used to teach inheritance.
+ */
 public class Burger extends DeliSandwich{
 
   public Burger(){
