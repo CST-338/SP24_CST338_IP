@@ -6,7 +6,11 @@ public class Restaurant {
   public static void main(String[] args) {
 
     List<DeliSandwich> menu = new ArrayList<>();
-    DeliSandwich sandwich = new DeliSandwich(2, "Ham and Cheese");
+    HashMap<String,Integer> fillings = new HashMap<>();
+    fillings.put("Emmental",2);
+    fillings.put("Pepper Jack",2);
+
+    DeliSandwich sandwich = new DeliSandwich(2, fillings);
     Burger burger = new Burger();
 
     menu.add(sandwich);

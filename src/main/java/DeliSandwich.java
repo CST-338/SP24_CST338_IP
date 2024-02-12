@@ -27,8 +27,12 @@ public class DeliSandwich implements Sandwich {
   @Override
   public String listFilling(){
     StringBuilder sb = new StringBuilder();
-    for (String key : fillings.keySet()){
-      sb.append(String.format("%s%n",key));
+    if(!fillings.isEmpty()){
+      for (String key : fillings.keySet()){
+        sb.append(String.valueOf(String.format("%s%n", key)).repeat(Math.max(0, fillings.get(key))));
+      }
+    }else{
+      return "no fillings: not a sandwich.";
     }
     return sb.toString();
   }
@@ -39,10 +43,10 @@ public class DeliSandwich implements Sandwich {
   @Override
   public String toString() {
     return "This " + this.getClass().getName()
-        + " is "
-        + (slicesOfBread > 1 ? "Bread" : "")
+        + String.format(" is %n")
+        + (slicesOfBread > 1 ? String.format("Bread%n") : "")
         + listFilling()
-        + " bread.";
+        + "bread.";
   }
 
   @Override
