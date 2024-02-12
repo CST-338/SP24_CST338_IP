@@ -9,8 +9,8 @@ import java.util.Objects;
 public class DeliSandwich implements Sandwich {
 
   //Integer rather than int because of containers.
-  private Integer slicesOfBread;
-  private HashMap<String, Integer> fillings;
+  private final Integer slicesOfBread;
+  private final HashMap<String, Integer> fillings;
 
   public DeliSandwich(Integer bread, String filling){
     this.slicesOfBread = bread;
