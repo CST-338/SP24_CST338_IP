@@ -5,7 +5,7 @@ import java.util.List;
 public class Restaurant {
   public static void main(String[] args) {
 
-    List<DeliSandwich> menu = new ArrayList<>();
+    List<Sandwich> menu = new ArrayList<>();
     HashMap<String,Integer> fillings = new HashMap<>();
     fillings.put("Emmental",2);
     fillings.put("Pepper Jack",2);
@@ -16,7 +16,7 @@ public class Restaurant {
     menu.add(sandwich);
     menu.add(burger);
 
-    for(DeliSandwich s : menu){
+    for(Sandwich s : menu){
       System.out.println(s);
     }
 
